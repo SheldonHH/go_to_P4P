@@ -8,7 +8,7 @@ var data_path = "/root/user_data1.csv"
 var jar_path = "/root/P4P/P4P.jar"
 
 func main() {
-    cmd := exec.Command("java", "-jar",jar_path, "sg")
+    cmd := exec.Command("java", "-jar",jar_path, data_path)
     stdout, err := cmd.Output()	
     if err != nil {
         fmt.Println(err.Error())
